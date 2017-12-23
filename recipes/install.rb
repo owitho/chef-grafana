@@ -9,7 +9,7 @@ when 'debian'
 
   apt_repository 'grafana' do
     uri "https://packagecloud.io/grafana/#{node['chef-grafana']['install']['channel']}/debian/"
-    distribution 'wheezy' # This is used for all debian/ubuntu versions
+    distribution 'jessie' # This is used for all debian/ubuntu versions
     key 'https://packagecloud.io/gpg.key'
     components ['main']
     action :add
