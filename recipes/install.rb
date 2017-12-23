@@ -14,6 +14,9 @@ when 'debian'
     components ['main']
     action :add
   end
+
+  apt_update
+  
 when 'rhel'
   yum_repository 'grafana' do
     description "Grafana - #{node['chef-grafana']['install']['channel']}"
