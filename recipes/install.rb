@@ -16,7 +16,7 @@ when 'debian'
   end
 
   apt_update
-  
+
 when 'rhel'
   yum_repository 'grafana' do
     description "Grafana - #{node['chef-grafana']['install']['channel']}"
@@ -35,5 +35,5 @@ package 'grafana' do
 end
 
 service 'grafana-server' do
-  action [:enable, :start]
+  action [:start]
 end
