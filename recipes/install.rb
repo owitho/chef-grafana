@@ -8,7 +8,7 @@ when 'debian'
   package 'apt-transport-https'
 
   apt_repository 'grafana' do
-    uri "https://packagecloud.io/grafana/#{node['chef-grafana']['install']['channel']}/debian/"
+    uri "https://mirrors.tuna.tsinghua.edu.cn/grafana/apt/"
     distribution 'jessie' # This is used for all debian/ubuntu versions
     key 'https://packagecloud.io/gpg.key'
     components ['main']
